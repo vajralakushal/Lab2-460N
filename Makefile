@@ -1,9 +1,12 @@
 all: compile
 
 compile:
+	make clean
+	./assembler.linux *.asm output.obj
 	gcc -std=c99 -g -o simulate lc3bsim2.c
+	./simulate output.obj
 
 clean:
-	rm simulate
-	rm output.obj
-	rm dumpsim
+	rm -f simulate
+	rm -f *.obj
+	rm -f dumpsim
