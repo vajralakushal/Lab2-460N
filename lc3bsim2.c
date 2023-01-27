@@ -368,6 +368,7 @@ void load_my_program() {
     FILE * prog;
     int ii, word, program_base;
     char* test = "C:/Users/ishac/Documents/Comp Arch Labs/Lab2/xorTest.obj";
+    //char* test = "";
     /* Open program file. */
     prog = fopen(test, "r");
     if (prog == NULL) {
@@ -417,8 +418,8 @@ int main(int argc, char *argv[]) {
 
     printf("LC-3b Simulator\n\n");
 
-    // initialize(argv[1], argc - 1);
-    load_my_program();
+    initialize(argv[1], argc - 1);
+    //load_my_program();
 
     if ( (dumpsim_file = fopen( "dumpsim", "w" )) == NULL ) {
         printf("Error: Can't open dumpsim file\n");
