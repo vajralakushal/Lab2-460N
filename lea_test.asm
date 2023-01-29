@@ -1,0 +1,9 @@
+.ORIG x3000
+
+LEA R0, TEN ; x3004
+LDW R0, R0, #0 ;RO has x3100
+
+
+TEN .FILL x3100
+
+.END

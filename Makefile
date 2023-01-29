@@ -2,7 +2,7 @@ all: compile
 
 compile:
 	make clean
-	./assembler.linux jmp_test.asm output.obj
+	./assembler.linux jsr_test.asm output.obj
 	gcc -std=c99 -g -o simulate lc3bsim2.c
 	./simulate output.obj
 
